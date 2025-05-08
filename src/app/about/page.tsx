@@ -5,8 +5,8 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen px-6 py-20 flex items-start justify-center">
       <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         className="max-w-3xl"
       >
@@ -23,7 +23,7 @@ export default function AboutPage() {
           .
         </p>
         <p className="mb-6 text-lg text-muted-foreground">
-          I’ve shipped products in <span className="font-medium">web dev</span>{" "}
+          I've shipped products in <span className="font-medium">web dev</span>{" "}
           (MERN),
           <span className="font-medium"> Android dev</span> (React Native +
           Firebase), and
@@ -34,7 +34,7 @@ export default function AboutPage() {
         <p className="mb-6 text-lg text-muted-foreground">
           Currently building <span className="font-semibold">Zenin</span> (a
           money-tracking app) and <span className="font-semibold">Dazai</span>{" "}
-          (a trading bot). On the side, I’m diving deep into{" "}
+          (a trading bot). On the side, I'm diving deep into{" "}
           <span className="text-red-500 font-semibold">machine learning</span>{" "}
           to push my quant skills further.
         </p>
