@@ -14,7 +14,7 @@ export default function AboutPage() {
           Who the hell is Akash?
         </h2>
         <p className="mb-6 text-lg text-muted-foreground">
-          I'm a full-stack developer, quant geek, and a soon-to-be ML wizard.
+          I&apos;m a full-stack developer, quant geek, and a soon-to-be ML wizard.
           Currently pursuing my MCA while building real-world projects that
           blend{" "}
           <span className="text-red-500 font-medium">
@@ -23,7 +23,7 @@ export default function AboutPage() {
           .
         </p>
         <p className="mb-6 text-lg text-muted-foreground">
-          I've shipped products in <span className="font-medium">web dev</span>{" "}
+          I&apos;ve shipped products in <span className="font-medium">web dev</span>{" "}
           (MERN),
           <span className="font-medium"> Android dev</span> (React Native +
           Firebase), and
@@ -34,14 +34,14 @@ export default function AboutPage() {
         <p className="mb-6 text-lg text-muted-foreground">
           Currently building <span className="font-semibold">Zenin</span> (a
           money-tracking app) and <span className="font-semibold">Dazai</span>{" "}
-          (a trading bot). On the side, I'm diving deep into{" "}
+          (a trading bot). On the side, I&apos;m diving deep into{" "}
           <span className="text-red-500 font-semibold">machine learning</span>{" "}
           to push my quant skills further.
         </p>
         <p className="text-lg text-muted-foreground">
-          I'm that guy who mixes{" "}
+          I&apos;m that guy who mixes{" "}
           <span className="italic">markets + models + mobile apps</span>. If
-          it's fast, useful, and minimal—I'm building it.
+          it&apos;s fast, useful, and minimal—I&apos;m building it.
         </p>
       </motion.section>
     </main>

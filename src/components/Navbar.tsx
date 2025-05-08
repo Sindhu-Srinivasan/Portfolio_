@@ -4,7 +4,7 @@ export const Navbar = () => (
   <nav className="bg-black py-4 px-6 shadow-md">
     <div className="container mx-auto flex justify-between item-center ">
       <Link href="/" className="text-xl font-bold">
-        Akash's Portfolio
+        Akash&apos;s Portfolio
       </Link>
       <div className="space-x-4">
         <Link href="/" className="text-white">
