@@ -1,20 +1,19 @@
-import { Engine } from "tsparticles-engine";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
 import { Container } from "@tsparticles/engine";
-import { loadSlim } from "tsparticles-slim";
+import Particles from "@tsparticles/react";
+import { useCallback } from "react";
 
-const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
-    await loadSlim(engine);
-  }, []);
+export const ParticlesBackground = () => {
+  // const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
+  //   await loadSlim(engine);
+  // }, []);
 
   const particlesLoaded = useCallback(
     async (container?: Container): Promise<void> => {
       if (!container) {
         return;
       }
-      await console.log(container);
+      // await loadParticlesOptions(container);
+      console.log("Particles container loaded", container);
     },
     []
   );
@@ -22,16 +21,19 @@ const ParticlesBackground = () => {
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
+      // particlesInit={particlesInit}
+      particlesLoaded={particlesLoaded}
       options={{
         background: {
           color: {
-            value: "#000000", // Black background
+            value: "#000000",
           },
         },
+        fullScreen: {
+          enable: true,
+          zIndex: -1 // Ensure it stays in the background
+        },
         fpsLimit: 60,
-        
         interactivity: {
           events: {
             onClick: {
@@ -41,6 +43,11 @@ const ParticlesBackground = () => {
             onHover: {
               enable: true,
               mode: "repulse",
+              parallax: {
+                enable: false,
+                force: 60,
+                smooth: 10
+              }
             },
           },
           modes: {
@@ -55,10 +62,10 @@ const ParticlesBackground = () => {
         },
         particles: {
           color: {
-            value: "#ff0000", // Red particles
+            value: "#ff0000",
           },
           links: {
-            color: "#ff0000", // Red links
+            color: "#ff0000",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -78,11 +85,12 @@ const ParticlesBackground = () => {
             straight: false,
           },
           number: {
+            value: 30,
             density: {
               enable: true,
-              area: 1100,
-            },
-            value: 30,
+              width: 100,
+              height:400
+            }
           },
           opacity: {
             value: 0.45,
@@ -97,7 +105,5 @@ const ParticlesBackground = () => {
         detectRetina: true,
       }}
     />
-  );
+    );
 };
-
-export default ParticlesBackground;

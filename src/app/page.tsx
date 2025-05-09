@@ -1,5 +1,5 @@
 "use client";
-import ParticlesBackground from "@/components/ParticlesBackground";
+import { ParticlesBackground }from "@/components/ParticlesBackground";
 import { motion } from "framer-motion";
 
 export default function Home() {
