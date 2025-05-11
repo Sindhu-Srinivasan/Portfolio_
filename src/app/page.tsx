@@ -1,6 +1,7 @@
 "use client";
-import { ParticlesBackground }from "@/components/ParticlesBackground";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -87,7 +88,7 @@ export default function Home() {
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full">
+            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
               <h3 className="text-xl font-semibold mb-3">Zenin</h3>
               <p className="text-zinc-300 mb-4">
                 A personal finance tracker app, analyzing transactions and
@@ -106,7 +107,7 @@ export default function Home() {
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full">
+            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
               {" "}
               <h3 className="text-xl font-semibold mb-3">Dazai</h3>
               <p className="text-zinc-300 mb-4">
@@ -127,7 +128,7 @@ export default function Home() {
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full">
+            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
               {" "}
               <h3 className="text-xl font-semibold mb-3">Rentkr</h3>
               <p className="text-zinc-300 mb-4">
@@ -159,9 +160,11 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {/* Tech 1 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/python.svg"
               alt="Python"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">Python</span>
@@ -169,9 +172,11 @@ export default function Home() {
 
           {/* Tech 2 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/javascript.svg"
               alt="JavaScript"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">JavaScript</span>
@@ -179,9 +184,11 @@ export default function Home() {
 
           {/* Tech 3 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/react.svg"
               alt="React"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">React</span>
@@ -189,9 +196,11 @@ export default function Home() {
 
           {/* Tech 4 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/nodejs.svg"
               alt="Node.js"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">Node.js</span>
@@ -199,9 +208,11 @@ export default function Home() {
 
           {/* Tech 5 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/aws.svg"
               alt="AWS"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">AWS</span>
@@ -210,9 +221,11 @@ export default function Home() {
           {/* Tech 6 */}
           <div className="flex flex-col bg-white text-black items-center text-center">
             <div className="w-20 h-20 bg-white p-2 rounded-xl flex items-center justify-center">
-              <img
+              <Image
                 src="/tech-icons/nextjs.svg"
                 alt="Next.js"
+                width={16}
+              height={16}
                 className="w-12 h-12"
               />
             </div>
@@ -221,9 +234,11 @@ export default function Home() {
 
           {/* Tech 7 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/tailwindcss.svg"
               alt="Tailwind CSS"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">Tailwind CSS</span>
@@ -231,9 +246,11 @@ export default function Home() {
 
           {/* Tech 8 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/tech-icons/git.svg"
               alt="Git"
+              width={16}
+              height={16}
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">Git</span>
