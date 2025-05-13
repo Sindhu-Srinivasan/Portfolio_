@@ -2,15 +2,18 @@
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const MotionLink = motion(Link);
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="fixed inset-0 -z-10 w-full h-full top-0 left-0">
         <ParticlesBackground />
       </div>
-      {/* hot line section */}
-      <motion.section
+      {/* hero section */}
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -18,18 +21,16 @@ export default function Home() {
       >
         <motion.h1
           className="text-4xl sm:text-6xl font-bold tracking-tight"
-          animate={{ y: [0,-9,0],
+          animate={{
+            y: [0, -9, 0],
             transition: {
               duration: 1,
               ease: "easeInOut",
             },
-           }}
+          }}
         >
-          I Build Products Where <br />{" "}
-          <span
-            className="bg-gradient-to-r from-red-500 to-zinc-500 bg-clip-text text-transparent
-"
-          >
+          I Build Products Where <br />
+          <span className="bg-gradient-to-r from-red-500 to-zinc-500 bg-clip-text text-transparent">
             Finance meets Code
           </span>
         </motion.h1>
@@ -39,115 +40,167 @@ export default function Home() {
           Building, trading, optimizing.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <a
+          <MotionLink
             href="/projects"
+            whileTap={{ scale: 0.9 }}
             className="bg-red-500 hover:bg-red-600 font-semibold text-md rounded-xl px-5 py-2 transition "
           >
             See My Projects
-          </a>
+          </MotionLink>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* about me section */}
-      <motion.section
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="mt-20 text-center max-w-3xl mx-auto"
+        className="mt-20 text-center max-w-4xl mx-auto h-full"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 "> <span className=" bg-gradient-to-r from-red-600 via-white/70 to-red-600 bg-clip-text text-transparent">About Me</span> </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 ">
+          <span className=" bg-gradient-to-r from-red-600 via-white/70 to-red-600 bg-clip-text text-transparent">
+            About Me
+          </span>
+        </h2>
         <p className="text-lg sm:text-xl text-muted-foreground mb-6">
           I&apos;m an MCA student with a passion for full-stack development and
-          quantitative trading systems. Currently building{" "}
-          <strong>Zenin</strong>, <strong>Dazai</strong> &{" "}
-          <strong>Rentkr</strong> — blending code, finance, and clean design.
+          quantitative trading systems. Currently building
+          <strong> Zenin</strong>, <strong>Dazai</strong> &
+          <strong> Rentkr</strong> — blending code, finance, and clean design.
         </p>
-        <a
+
+        <MotionLink
+          whileTap={{ scale: 0.9 }}
           href="/about"
           className="inline-block bg-transparent border border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-semibold text-sm rounded-xl px-5 py-2 transition"
         >
           More About Me
-        </a>
-      </motion.section>
+        </MotionLink>
+      </motion.div>
 
       {/* projects preview section */}
-      <motion.section
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="mt-20 text-center max-w-3xl mx-auto"
+        className="mt-20 text-center max-w-7xl mx-auto h-full"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-          <span className="bg-gradient-to-r from-red-600 via-white/70  to-red-600 bg-clip-text text-transparent">Featured Projects</span>
+          <span className="bg-gradient-to-r from-red-600 via-white/70  to-red-600 bg-clip-text text-transparent">
+            Featured Projects
+          </span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Project 1 */}
-          <motion.section
+          <motion.div
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
+            <div
+              className="bg-white/10 border border-white/50 backdrop-blur rounded-lg p-6 hover:shadow-2xl hover:border-red-500/50
+ transition-shadow h-full mx-4 md:m-0"
+            >
+              <div className="h-1 w-10 bg-gradient-to-r from-red-600 to-red-400 mb-4 rounded"></div>
               <h3 className="text-xl font-semibold mb-3">Zenin</h3>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-white/80 mb-4">
                 A personal finance tracker app, analyzing transactions and
                 suggesting savings strategies.
               </p>
-              <a
+              <div className="flex gap-2 mb-4">
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  React Native
+                </span>
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  Firebase
+                </span>
+              </div>
+              <MotionLink
+                whileTap={{ scale: 0.9 }}
                 href="/projects"
                 className="inline-block bg-red-500 text-white font-semibold text-sm rounded-xl px-5 py-2 transition hover:bg-red-600"
               >
-                View Project
-              </a>
+                View Projects
+              </MotionLink>
             </div>
-          </motion.section>
+          </motion.div>
           {/* Project 2 */}
-          <motion.section
+          <motion.div
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
-              {" "}
+            <div
+              className="bg-white/10 border border-white/50 backdrop-blur rounded-lg p-6 hover:shadow-2xl hover:border-red-500/50
+ transition-shadow h-full mx-4 md:m-0"
+            >
+              <div className="h-1 w-10 bg-gradient-to-r from-red-600 to-red-400 mb-4 rounded"></div>
               <h3 className="text-xl font-semibold mb-3">Dazai</h3>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-white/80 mb-4">
                 A quantitative trading algorithm for stocks and crypto using
                 Python, focused on market analysis.
               </p>
-              <a
+              <div className="flex gap-2 mb-4">
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  Python
+                </span>
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  Pandas
+                </span>
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  Streamlit
+                </span>
+              </div>
+              <MotionLink
+                whileTap={{ scale: 0.9 }}
                 href="/projects"
                 className="inline-block bg-red-500 text-white font-semibold text-sm rounded-xl px-5 py-2 transition hover:bg-red-600"
               >
                 View Project
-              </a>
+              </MotionLink>
             </div>
-          </motion.section>
+          </motion.div>
 
           {/* Project 3 */}
-          <motion.section
+          <motion.div
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="bg-white/7 border border-white/20 backdrop-blur-md rounded-lg p-6 hover:shadow-xl transition-shadow h-full mx-4 md:m-0">
-              {" "}
+            <div
+              className="bg-white/10 border border-white/50 backdrop-blur rounded-lg p-6 hover:shadow-2xl hover:border-red-500/50
+ transition-shadow h-full mx-4 md:m-0"
+            >
+              <div className="h-1 w-10 bg-gradient-to-r from-red-600 to-red-400 mb-4 rounded"></div>
               <h3 className="text-xl font-semibold mb-3">Rentkr</h3>
-              <p className="text-zinc-300 mb-4">
+              <p className="text-white/80 mb-4">
                 A MERN stack website for renting items, targeted at bachelors
                 and college students.
               </p>
-              <a
+              <div className="flex gap-2 mb-4">
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  React.js
+                </span>
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  JavaScript
+                </span>
+                <span className="bg-red-600/20 text-red-400 text-xs font-medium px-2 py-1 rounded">
+                  MongoDB
+                </span>
+              </div>
+              <MotionLink
+                whileTap={{ scale: 0.9 }}
                 href="/projects"
                 className="inline-block bg-red-500 text-white font-semibold text-sm rounded-xl px-5 py-2 transition hover:bg-red-600"
               >
                 View Project
-              </a>
+              </MotionLink>
             </div>
-          </motion.section>
+          </motion.div>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* tech stack section */}
-      <motion.section
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -155,11 +208,16 @@ export default function Home() {
         className="mt-20 py-10 mb-20 text-center max-w-3xl mx-auto w-full"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-        <span className="bg-gradient-to-r from-red-600 via-white/70 to-red-600 bg-clip-text text-transparent">Tech Stack</span>
+          <span className="bg-gradient-to-r from-red-600 via-white/70 to-red-600 bg-clip-text text-transparent">
+            Tech Stack
+          </span>
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {/* Tech 1 */}
-          <div className="flex flex-col items-center text-center">
+          <motion.div
+            whileHover={{ y: 2, scale: 0.9 }}
+            className="flex flex-col items-center text-center"
+          >
             <Image
               src="/tech-icons/python.svg"
               alt="Python"
@@ -168,7 +226,7 @@ export default function Home() {
               className="w-16 h-16 mb-4"
             />
             <span className="font-semibold text-lg">Python</span>
-          </div>
+          </motion.div>
 
           {/* Tech 2 */}
           <div className="flex flex-col items-center text-center">
@@ -219,13 +277,13 @@ export default function Home() {
           </div>
 
           {/* Tech 6 */}
-          <div className="flex flex-col bg-white text-black items-center text-center">
-            <div className="w-20 h-20 bg-white p-2 rounded-xl flex items-center justify-center">
+          <div className="flex flex-col  text-white items-center text-center">
+            <div className="w-20 h-20 p-2 rounded-xl flex items-center justify-center">
               <Image
                 src="/tech-icons/nextjs.svg"
                 alt="Next.js"
                 width={16}
-              height={16}
+                height={16}
                 className="w-12 h-12"
               />
             </div>
@@ -256,7 +314,7 @@ export default function Home() {
             <span className="font-semibold text-lg">Git</span>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
     </main>
   );
 }
