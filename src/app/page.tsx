@@ -37,7 +37,7 @@ export default function Home() {
         </motion.h1>
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Full-stack dev with a quant brain. <br />
-          Web, Android & Trading Systems — I build 'em. <br />
+          Web, Android & Trading Systems — I build &apos;em. <br />
           Soon going headfirst into ML. <br />I turn logic into leverage.
         </p>
 
