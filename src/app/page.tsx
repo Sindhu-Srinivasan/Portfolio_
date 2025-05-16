@@ -23,8 +23,9 @@ export default function Home() {
           className="text-4xl sm:text-6xl font-bold tracking-tight"
           animate={{
             y: [0, -9, 0],
+            scale: [1, 1.05, 1],
             transition: {
-              duration: 1,
+              duration: 1.2,
               ease: "easeInOut",
             },
           }}
@@ -34,18 +35,24 @@ export default function Home() {
             Finance meets Code
           </span>
         </motion.h1>
-        <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Full-stack dev with a quant brain. I make web, Android & trading
-          systems. Soon diving deep into ML. Turning logic into leverage.
-          Building, trading, optimizing.
+        <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          Full-stack dev with a quant brain. <br />
+          Web, Android & Trading Systems — I build 'em. <br />
+          Soon going headfirst into ML. <br />I turn logic into leverage.
+        </p>
+
+        <p className="mt-4 text-xl sm:text-2xl font-bold bg-gradient-to-r from-red-500 to-zinc-500 bg-clip-text text-transparent">
+          Build. Trade. Optimize. Repeat.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <MotionLink
             href="/projects"
-            whileTap={{ scale: 0.9 }}
-            className="bg-red-500 hover:bg-red-600 font-semibold text-md rounded-xl px-5 py-2 transition "
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            className="relative bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold text-xl rounded-2xl px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden"
           >
-            See My Projects
+            <span className="relative z-10">Explore My Work</span>
+            <span className="absolute inset-0 rounded-2xl border-[3px] border-transparent pointer-events-none animate-borderMagic"></span>
           </MotionLink>
         </div>
       </motion.div>
