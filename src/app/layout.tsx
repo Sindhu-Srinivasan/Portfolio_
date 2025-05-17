@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
-import {Footer} from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Akash | Portfolio",
-  description: "Showcasing my work in finance tech, web, and mobile development.",
+  description:
+    "Showcasing my work in finance tech, web, and mobile development.",
 };
 
 export default function RootLayout({
@@ -31,7 +32,9 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children} <Analytics />
+        </main>
 
         <Footer />
       </body>
