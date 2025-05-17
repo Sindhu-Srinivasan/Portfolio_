@@ -15,7 +15,7 @@ const projects = [
     title: "Dazai - Trading Algo",
     description:
       "A quantitative trading algorithm that generates buy/sell signals for stocks and crypto, with logging to track performance. Developed with Python and various technical indicators.",
-    link: "https://github.com/akash-kumar5/dazai",
+    link: "https://github.com/akash-kumar5/Dazai---Quant-Trading",
     color: "text-emerald-500",
     image: "/images/dazaiui.jpg",
     imageClass: "", // placeholder or actual image
@@ -24,7 +24,7 @@ const projects = [
     title: "RentKr - Item Rental Service",
     description:
       "A MERN stack web app for renting out items like sound systems, bikes, and books. Built with React, Node.js, MongoDB, and AWS S3 for image storage.",
-    link: "https://github.com/your-username/rentkr",
+    link: "https://github.com/akash-kumar5/RentKr",
     color: "text-indigo-500",
     image: "/images/rentkr-front.png",
     imageClass: "rotate-4 ", // placeholder or actual image
