@@ -75,7 +75,7 @@ export const Navbar = () => {
             // aria-haspopup="true"
             // aria-expanded={showDropdown}
           >
-            Let's Connect <ChevronDown size={16} />
+            Let&apos;s Connect <ChevronDown size={16} />
           </button>
           {showDropdown && (
             <div
@@ -148,7 +148,7 @@ export const Navbar = () => {
           </Link>
           <details className="group relative max-w-xs">
             <summary className="cursor-pointer flex items-center gap-1 list-none hover:text-red-400">
-              Let's Connect
+              Let&apos;s Connect
             </summary>
             <div className="ml-2 mt-2 space-y-1 pl-2 border-l border-red-500 transition-all">
               <a
