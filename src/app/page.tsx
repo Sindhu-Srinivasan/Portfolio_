@@ -71,7 +71,7 @@ export default function Home() {
           </span>
         </h2>
         <p className="text-lg sm:text-xl text-muted-foreground mb-6">
-          I&apos;m an MCA student with a passion for full-stack development and
+          I&apos;m a Master in Computer Application with a passion for full-stack development and
           quantitative trading systems. Currently building
           <strong> Zenin</strong>, <strong>Dazai</strong> &
           <strong> Rentkr</strong> — blending code, finance, and clean design.
