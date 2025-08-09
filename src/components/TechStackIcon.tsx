@@ -1,8 +1,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+type TechStackIconProps = {
+  src: string;
+  alt: string;
+  name: string;
+
+}
 // components/TechStackIcon.tsx
-const TechStackIcon = ({ src, alt, name }) => (
+const TechStackIcon = ({ src, alt, name }: TechStackIconProps) => (
   <motion.div
     whileHover={{ y: 2, scale: 0.9 }}
     className="flex flex-col items-center text-center"
