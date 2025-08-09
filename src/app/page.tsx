@@ -72,11 +72,18 @@ export default function Home() {
           </span>
         </h2>
         <p className="text-lg sm:text-xl text-muted-foreground mb-6">
+<<<<<<< HEAD
           I&apos;m an MCA student passionate about full-stack development and
           AI. Currently building
           <strong> Zenin</strong>, <strong>Dazai</strong>,
           <strong> Rentkr</strong> & <strong>Lexx</strong> — blending Python,
           Next.js, and clean design with emerging AI tech like LLMs and RAG.
+=======
+          I&apos;m a Master in Computer Application with a passion for full-stack development and
+          quantitative trading systems. Currently building
+          <strong> Zenin</strong>, <strong>Dazai</strong> &
+          <strong> Rentkr</strong> — blending code, finance, and clean design.
+>>>>>>> 56ecb74b6778f4e30a0e57d74bb7d56653e5b94f
         </p>
 
         <MotionLink
