@@ -3,11 +3,11 @@ import { ParticlesBackground } from "@/components/ParticlesBackground";
 import ProjectCard from "@/components/ProjectCard";
 import TechStackIcon from "@/components/TechStackIcon";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   const MotionLink = motion(Link);
+  
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
