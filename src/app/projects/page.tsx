@@ -3,33 +3,39 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Zenin - Finance Tracker",
-    description:
-      "A mobile finance tracking app that categorizes spending, suggests savings strategies, and tracks investments. Built using React Native and Firebase.",
+    title:"Lexx – Legal AI",
+    description:"AI legal assistant for Indian law - delivers citation-backed answers using RAG. Built with Next.js, FastAPI & OpenRouter.",
+    link:"https://github.com/akash-kumar5/Lexx-LegalAI",
+    color:"text-zinc-400",
+    image:"/images/lexxui.jpg",
+    imageClass:"max-h-50"
+  },
+  {
+    title: "Zenin – Finance Tracker",
+    description:"Mobile app that tracks expenses, suggests savings, and monitors investments in real time. Built with React Native & Firebase.",
     link: "https://github.com/akash-kumar5/zenin",
     color: "text-rose-500",
-    image: "/images/zenin-front.jpg", // put your image path here
+    image: "/images/zenin-front.jpg",
     imageClass: "max-h-60 rotate-5",
   },
   {
-    title: "Dazai - Trading Algo",
-    description:
-      "A quantitative trading algorithm that generates buy/sell signals for stocks and crypto, with logging to track performance. Developed with Python and various technical indicators.",
+    title: "Dazai – Trading Algorithm",
+    description:"Quantitative trading bot for stocks & crypto with performance tracking. Uses Python & technical indicators.",
     link: "https://github.com/akash-kumar5/Dazai---Quant-Trading",
     color: "text-emerald-500",
     image: "/images/dazaiui.jpg",
-    imageClass: "", // placeholder or actual image
+    imageClass: "",
   },
   {
-    title: "RentKr - Item Rental Service",
-    description:
-      "A MERN stack web app for renting out items like sound systems, bikes, and books. Built with React, Node.js, MongoDB, and AWS S3 for image storage.",
+    title: "RentKr – Rental Platform",
+    description:"MERN stack marketplace to rent items like sound systems, bikes & books. AWS S3 for image storage.",
     link: "https://github.com/akash-kumar5/RentKr",
     color: "text-indigo-500",
     image: "/images/rentkr-front.png",
-    imageClass: "rotate-4 ", // placeholder or actual image
+    imageClass: "rotate-4",
   },
 ];
+
 
 export default function ProjectPage() {
   return (
@@ -51,7 +57,7 @@ export default function ProjectPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl font-extrabold mb-16 text-center"
+          className="text-4xl font-extrabold mt-4 mb-12 text-center"
         >
           My Projects
         </motion.h2>
