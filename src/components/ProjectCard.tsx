@@ -2,8 +2,12 @@ import { motion } from "framer-motion";
 
 // Assume MotionLink is imported or defined elsewhere
 const MotionLink = motion.a; // Placeholder for your component
-
-const ProjectCard = ({ title, desc, tech = [] }) => {
+type ProjectCardProps = {
+  title: string;
+  desc: string;
+  tech: string[]; // <-- allow array of strings
+};
+const ProjectCard = ({ title, desc, tech = [] }: ProjectCardProps) => {
   // Add a return statement, which was missing in your original code
   return (
     <motion.div
@@ -17,7 +21,6 @@ const ProjectCard = ({ title, desc, tech = [] }) => {
         <h3 className="text-xl font-semibold mb-3">{title}</h3>
         <p className="text-white/80 mb-4">{desc}</p>
         
-        {/* ---- MODIFIED PART ---- */}
         {/* Map over the tech array to dynamically create tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {tech.map((techName) => (
@@ -29,7 +32,6 @@ const ProjectCard = ({ title, desc, tech = [] }) => {
             </span>
           ))}
         </div>
-        {/* ---- END OF MODIFIED PART ---- */}
 
         <MotionLink
           whileTap={{ scale: 0.9 }}
