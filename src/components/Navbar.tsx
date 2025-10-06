@@ -22,7 +22,7 @@ export const Navbar = () => {
     timeoutRef.current = setTimeout(() => {
       setShowDropdown(false);
       timeoutRef.current = null;
-    }, 2000); // 3 seconds delay before hiding
+    }, 2000);
   };
 
   // Close dropdown on outside click
@@ -49,7 +49,7 @@ export const Navbar = () => {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-black/50 to-red-800/50 backdrop-blur-md w-[90%] text-white px-8 py-3 rounded-2xl shadow-xl flex items-center justify-between z-50">
       {/* Logo / Name */}
       <Link href="/" className="text-lg font-bold tracking-wide">
-        Akash Kumar
+        Sindhu
       </Link>
 
       {/* Desktop Links */}
@@ -72,8 +72,6 @@ export const Navbar = () => {
             onClick={() => setShowDropdown(!showDropdown)}
             type="button"
             className="flex items-center gap-1 hover:text-red-400 transition ease-in"
-            // aria-haspopup="true"
-            // aria-expanded={showDropdown}
           >
             Let&apos;s Connect <ChevronDown size={16} />
           </button>
@@ -84,7 +82,7 @@ export const Navbar = () => {
               }`}
             >
               <a
-                href="https://github.com/akash-kumar5"
+                href="https://github.com/Sindhu-Srinivasan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-4 py-2 hover:bg-red-700 transition"
@@ -92,7 +90,7 @@ export const Navbar = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/-akash-kumar"
+                href="https://www.linkedin.com/in/sindhu0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-4 py-2 hover:bg-red-700 transition"
@@ -100,7 +98,7 @@ export const Navbar = () => {
                 LinkedIn
               </a>
               <a
-                href="mailto:akashsingh4152@gmail.com"
+                href="mailto:sindhu0674@gmail.com"
                 className="block px-4 py-2 hover:bg-red-700 transition"
               >
                 Email
@@ -109,11 +107,10 @@ export const Navbar = () => {
           )}
         </div>
 
+        {/* Resume Download (Desktop) */}
         <a
-          href="/Akash_Kumar_Resume.pdf"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/Sindhu.pdf"
+          download="Sindhu-Resume.pdf"
           className="flex items-center gap-2 border border-red-500 hover:bg-red-500 hover:text-white rounded-xl px-4 py-1.5 transition"
         >
           <Download size={16} /> Resume
@@ -152,7 +149,7 @@ export const Navbar = () => {
             </summary>
             <div className="ml-2 mt-2 space-y-1 pl-2 border-l border-red-500 transition-all">
               <a
-                href="https://github.com/akash-kumar5"
+                href="https://github.com/Sindhu-Srinivasan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-red-300"
@@ -160,7 +157,7 @@ export const Navbar = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/-akash-kumar"
+                href="https://linkedin.com/in/sindhu0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-red-300"
@@ -168,7 +165,7 @@ export const Navbar = () => {
                 LinkedIn
               </a>
               <a
-                href="mailto:akashsingh4152@gmail.com"
+                href="mailto:sindhu0674@gmail.com"
                 className="block hover:text-red-300"
               >
                 Email
@@ -176,10 +173,10 @@ export const Navbar = () => {
             </div>
           </details>
 
+          {/* Resume Download (Mobile) */}
           <a
-            href="/Akash_Kumar_Resume.pdf"
-            download
-            target="_blank"
+            href="/Sindhu.pdf"
+            download="Sindhu-Resume.pdf"
             onClick={() => setOpenDrawer(false)}
             className="flex items-center gap-2 border border-red-500 hover:bg-red-500 hover:text-white rounded-xl px-4 py-1.5 transition"
           >

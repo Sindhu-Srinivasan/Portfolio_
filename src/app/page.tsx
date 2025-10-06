@@ -32,18 +32,18 @@ export default function Home() {
             },
           }}
         >
-          I Build Web & Mobile Apps <br />
+          I Build AI/ML & Web Apps <br />
           <span className="bg-gradient-to-r from-red-500 to-zinc-500 bg-clip-text text-transparent">
-            Evolving into AI
+            Full-Stack & AI Developer
           </span>
         </motion.h1>
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Full-stack developer (Python, Next.js, React Native). <br />
-          Currently diving into LLMs and RAG to build smarter products.
+          AI/ML Engineer & Full-Stack Developer (Python, FastAPI, Next.js, ML, DL). <br />
+  Passionate about creating intelligent systems and scalable web apps.
         </p>
 
         <p className="mt-4 text-xl sm:text-2xl font-bold bg-gradient-to-r from-red-500 to-zinc-500 bg-clip-text text-transparent">
-          Code. Learn. Ship. Repeat.
+          Innovate. Build. Deploy. Repeat.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <MotionLink
@@ -72,12 +72,13 @@ export default function Home() {
           </span>
         </h2>
         <p className="text-lg sm:text-xl text-muted-foreground mb-6">
-          I&apos;m an MCA student passionate about full-stack development and
-          AI. Currently building
-          <strong> Zenin</strong>, <strong>Dazai</strong>,
-          <strong> Rentkr</strong> & <strong>Lexx</strong> — blending Python,
-          Next.js, and clean design with emerging AI tech like LLMs and RAG.
-        </p>
+          I&apos;m Sindhu, B.Tech student passionate about full-stack development and
+          AI/ML. Currently building
+          <strong>AI Powered Flood Risk Assessment</strong>, 
+          <strong> Role Validator</strong>, 
+          <strong> Intelligent SQL Assistant</strong> & 
+          <strong> Kidney Health Prediction</strong> — combining Next.js, Streamlit, and Flask with AI-driven solutions in geospatial analysis, natural language processing, and healthcare.
+          </p>
 
         <MotionLink
           whileTap={{ scale: 0.9 }}
@@ -89,51 +90,50 @@ export default function Home() {
       </motion.div>
 
       {/* projects preview section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="mt-20 text-center max-w-7xl mx-auto h-full"
-      >
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-          <span className="bg-gradient-to-r from-red-600 via-white/70  to-red-600 bg-clip-text text-transparent">
-            Featured Projects
-          </span>
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {/* Project 1 */}
-          <ProjectCard
-            title="Zenin"
-            desc="A personal finance tracker app, analyzing transactions and
-                suggesting savings strategies."
-            tech={["React Native", "Firebase"]}
-          />
-          {/* Project 2 */}
-          <ProjectCard
-            title="Dazai"
-            desc="A quantitative trading algorithm for stocks and crypto using
-                Python, focused on market analysis."
-            tech={["Python", "Pandas", "Streamlit"]}
-          />
+      {/* projects preview section */}
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="mt-20 text-center max-w-7xl mx-auto h-full"
+>
+  <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
+    <span className="bg-gradient-to-r from-red-600 via-white/70  to-red-600 bg-clip-text text-transparent">
+      Featured Projects
+    </span>
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {/* Project 1 */}
+    <ProjectCard
+      title="AI Powered Flood Risk Assessment Tool"
+      desc="AI-Powered Flood Risk Assessment System is a full-stack application that evaluates flood risks using geographic coordinates or terrain images."
+      tech={["Next.js", "TailwindCSS", "Python", "ML"]}
+    />
 
-          {/* Project 3 */}
-          <ProjectCard
-            title="RentKr"
-            desc="A MERN stack website for renting items, targeted at bachelors
-                and college students."
-            tech={["React.js", "NodeJs", "MongoDB", "JavaScript"]}
-          />
+    {/* Project 2 */}
+    <ProjectCard
+      title="Role Validator XML to PDF Job Role Comparison Tool"
+      desc="An AI-powered Streamlit app that validates job roles by comparing structured XML definitions with roles extracted from unstructured PDFs."
+      tech={["Streamlit", "Python", "LLMs"]}
+    />
 
-          {/* project 4 */}
-          <ProjectCard
-            title="Lexx"
-            desc="AI legal chat focused on Indian laws. RAG-powered answers with
-                real citations. Built with Next.js, FastAPI & OpenRouter."
-            tech={["Next.js", "FastAPI", "Python", "RAG"]}
-          />
-        </div>
-      </motion.div>
+    {/* Project 3 */}
+    <ProjectCard
+      title="Intelligent SQL Assistant"
+      desc="An AI-powered Streamlit app that converts natural language questions into SQL queries. It supports live querying, result display, and intelligent SQL generation."
+      tech={["Streamlit", "Python", "LLMs", "SQL"]}
+    />
+
+    {/* Project 4 */}
+    <ProjectCard
+      title="Kidney Health Prediction - End-to-End ML Pipeline"
+      desc="This project focuses on the classification of kidney diseases using deep learning and computer vision techniques. It includes a full ML pipeline with ingestion, transformation, training, and evaluation."
+      tech={["Next.js", "TypeScript", "TailwindCSS", "Flask", "MLflow", "DVC"]}
+    />
+  </div>
+</motion.div>
+
 
       {/* tech stack section */}
       <motion.div

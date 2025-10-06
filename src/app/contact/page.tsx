@@ -24,10 +24,10 @@ export default function ContactPage() {
             <p className="text-lg text-muted-foreground">
               You can reach me at{" "}
               <a
-                href="mailto:akash@example.com"
+                href="mailto:sindhu@example.com"
                 className="text-red-500 font-medium"
               >
-                akashsingh4152@gmail.com
+                sindhu0674@gmail.com
               </a>
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
             </h3>
             <div className="space-x-6">
               <a
-                href="https://www.linkedin.com/in/-akash-kumar"
+                href="https://www.linkedin.com/in/sindhu0/"
                 className="text-lg text-red-500 font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/akash-kumar5"
+                href="https://github.com/Sindhu-Srinivasan"
                 className="text-lg text-red-500 font-medium"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+// ✅ Use Inter and Roboto Mono instead of Geist
+import { Inter, Roboto_Mono } from "next/font/google";
+
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Akash | Portfolio",
+  title: "Sindhu | Portfolio",
   description:
-    "Showcasing my work in finance tech, web, and mobile development.",
+    "AI/ML Engineer & Full-Stack Developer | Building intelligent systems & scalable apps.",
 };
 
 export default function RootLayout({
@@ -26,14 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+      <body className="antialiased">
         <Navbar />
 
         <main className="flex-1">
-          {children} <Analytics />
+          {children}
+          <Analytics />
         </main>
 
         <Footer />
